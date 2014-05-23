@@ -55,13 +55,13 @@ describe 'the Friday test :)' do
     expect(n).to eq ['puma', 'maker', 'sky']
   end
 
-  # specify 'get_first_half_of_string' do
-  #   a = get_first_half_of_string 'banana'
-  #   b = get_first_half_of_string 'apple'
+  specify 'get_first_half_of_string' do
+    a = get_first_half_of_string 'banana'
+    b = get_first_half_of_string 'apple'
 
-  #   expect(a).to eq 'ban'
-  #   expect(b).to eq 'app'
-  # end
+    expect(a).to eq 'ban'
+    expect(b).to eq 'app'
+  end
 
   # specify 'make_numbers_negative' do
   #   a = make_numbers_negative 5
