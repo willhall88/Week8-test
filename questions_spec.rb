@@ -13,20 +13,20 @@ describe 'the Friday test :)' do
     expect(n).to eq ['apples', 'avocados']
   end
 
-  # specify 'select_elements_starting_with_vowel' do
-  #   n = select_elements_starting_with_vowel ['john', 'david', 'omar', 'fred', 'idris', 'angela']
-  #   expect(n).to eq ['omar', 'idris', 'angela']
-  # end
+  specify 'select_elements_starting_with_vowel' do
+    n = select_elements_starting_with_vowel ['john', 'david', 'omar', 'fred', 'idris', 'angela']
+    expect(n).to eq ['omar', 'idris', 'angela']
+  end
 
-  # specify 'remove_nils_from_array' do
-  #   n = remove_nils_from_array ['a', 'b', nil, nil, false, 'c', nil]
-  #   expect(n).to eq ['a', 'b', false, 'c']
-  # end
+  specify 'remove_nils_from_array' do
+    n = remove_nils_from_array ['a', 'b', nil, nil, false, 'c', nil]
+    expect(n).to eq ['a', 'b', false, 'c']
+  end
 
-  # specify 'remove_nils_and_false_from_array' do
-  #   n = remove_nils_and_false_from_array ['a', 'b', nil, nil, false, 'c', nil]
-  #   expect(n).to eq ['a', 'b', 'c']
-  # end
+  specify 'remove_nils_and_false_from_array' do
+    n = remove_nils_and_false_from_array ['a', 'b', nil, nil, false, 'c', nil]
+    expect(n).to eq ['a', 'b', 'c']
+  end
 
   # specify 'reverse_every_element_in_array' do
   #   n = reverse_every_element_in_array ['dog', 'monkey', 'elephant']
