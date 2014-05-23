@@ -68,6 +68,9 @@ end
 # even numbers come first
 # so [1, 2, 3, 4, 5, 6] becomes [[2, 4, 6], [1, 3, 5]]
 def separate_array_into_even_and_odd_numbers(array)
+  even = array.select{|element| element.even?}
+  odd = array.select{|element| element.odd?}
+  new_array = [even, odd]
 end
 
 # count the numbers of elements in an element which are palindromes
