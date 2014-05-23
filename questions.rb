@@ -250,6 +250,12 @@ end
 # the next year when your birthday will fall on a friday
 # e.g. january 1st, will next be a friday in 2016
 def your_birthday_is_on_a_friday_in_the_year(birthday)
+
+  until birthday.friday?
+    birthday = Time.new((birthday.year + 1), birthday.month, birthday.day)
+  end
+  return birthday.year
+    
 end
 
 # in a file, total the number of times words of different lengths
