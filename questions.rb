@@ -225,6 +225,8 @@ end
 
 # count the number of words in a file
 def word_count_a_file(file_path)
+  file = File.new(file_path)
+  file.read.count(" ")+1
 end
 
 # --- tougher ones ---
