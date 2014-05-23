@@ -215,8 +215,7 @@ end
 # should return true for a 3 dot range like 1...20, false for a 
 # normal 2 dot range
 def is_a_3_dot_range?(range)
-  end_number = range.last
-  range.to_a.last != end_number
+  range.to_a.last != range.last
 end
 
 # get the square root of a number
@@ -234,6 +233,7 @@ end
 # called call_method_from_string('foobar')
 # the method foobar should be invoked
 def call_method_from_string(str_method)
+
 end
 
 # return true if the date is a uk bank holiday for 2014
