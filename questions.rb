@@ -271,7 +271,7 @@ def count_words_of_each_length_in_a_file(file_path)
   values = ( [] << 0 ) * word_lengths.max
   hash = (keys.zip(values)).to_h
   word_lengths.map{|element| hash[element] = (hash[element]+1)}
-  hash
+  return hash
 end
 
 # implement fizzbuzz without modulo, i.e. the % method
