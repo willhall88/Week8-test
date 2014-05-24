@@ -95,13 +95,12 @@ end
 # returns 15
 def total_of_array(array)
   array.inject(:+)
-
 end
 
 # turn an array into itself repeated twice. So [1, 2, 3]
 # becomes [1, 2, 3, 1, 2, 3]
 def double_array(array)
-  array *2
+  array * 2
 end
 
 # convert a symbol into a string
@@ -112,7 +111,7 @@ end
 # get the average from an array, rounded to the nearest integer
 # so [10, 15, 25] should return 17
 def average_of_array(array)
-  (array.inject(:+)/array.length.to_f).ceil
+  (array.inject(:+) / array.length.to_f).ceil
 end
 
 # get all the elements in an array, up until the first element
@@ -127,10 +126,7 @@ end
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
-  hash ={}
-  hash[array[0]]=array[1]
-  hash[array[2]]=array[3]
-  return hash
+  array.each_slice(2).to_h
 end
 
 # get all the letters used in an array of words and return
