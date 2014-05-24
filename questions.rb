@@ -250,7 +250,6 @@ end
 # the next year when your birthday will fall on a friday
 # e.g. january 1st, will next be a friday in 2016
 def your_birthday_is_on_a_friday_in_the_year(birthday)
-
   until birthday.friday?
     birthday = Time.new((birthday.year + 1), birthday.month, birthday.day)
   end
@@ -264,6 +263,15 @@ end
 # and 1 that is 4 letters long. Return it as a hash in the format
 # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
 def count_words_of_each_length_in_a_file(file_path)
+  file = File.new(file_path)
+  words = file.read.split(/\W/)
+  word_lengths = words.map{|word| word.length}
+  word_lengths.delete(0)
+  keys = [*1..word_lengths.max]
+  values = ( [] << 0 ) * word_lengths.max
+  hash = (keys.zip(values)).to_h
+  word_lengths.map{|element| hash[element] = (hash[element]+1)}
+  hash
 end
 
 # implement fizzbuzz without modulo, i.e. the % method
